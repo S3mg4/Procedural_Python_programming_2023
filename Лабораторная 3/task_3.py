@@ -1,4 +1,3 @@
-
 def count_letters(string):
     lower_string = string.lower()
     list_of_letters = []
@@ -63,4 +62,4 @@ main_str = """
 
 dictionary_of_frequency = calculate_frequency(count_letters(main_str))
 for letter, value in dictionary_of_frequency.items():
-    print (f"{letter}: {round(value, 2)}")
+    print (f"{letter}: {value:.2f}")
