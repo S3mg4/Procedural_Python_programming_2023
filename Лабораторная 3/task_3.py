@@ -1,17 +1,12 @@
 def count_letters(string):
     lower_string = string.lower()
-    list_of_letters = []
-    for symbol in lower_string:
-        if symbol.isalpha():
-            list_of_letters.append(symbol)
-
     dictionary_of_letters = {}
-    for index, value in enumerate(list_of_letters):
-        sum_of_letter = 0
-        for letter in range(len(list_of_letters)):
-            if list_of_letters[letter] == value:
-                sum_of_letter += 1
-        dictionary_of_letters[value] = sum_of_letter
+
+    for elem in lower_string:
+        if elem.isalpha():
+            if elem not in dictionary_of_letters:
+                dictionary_of_letters[elem] = 0
+            dictionary_of_letters[elem] += 1
 
     return dictionary_of_letters
 
